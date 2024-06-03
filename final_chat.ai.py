@@ -128,7 +128,7 @@ if selected == "Let's Connect":
         with open(file_name) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    local_css("Chat.AI\styles\style.css")
+    local_css("https://github.com/DhvanilPatel2301/Chat.AI/blob/master/styles/style.css")
 
 if selected == "Home":
     # Display the chatbot's title on the page
