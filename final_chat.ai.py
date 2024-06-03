@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import google.generativeai as gen_ai
 from streamlit_option_menu import option_menu
 from PIL import Image
-
+from pathlib import Path
 
 # Load environment variables
 load_dotenv()
@@ -52,8 +52,9 @@ def translate_role_for_streamlit(user_role):
     else:
         None
 
-profile_pic = "https://github.com/DhvanilPatel2301/Chat.AI/blob/master/assests/Dp%20(Main).gif"
-css_file = "https://github.com/DhvanilPatel2301/Chat.AI/blob/master/styles/main.css"
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"   #D:\Chat.AI\styles\main.css
+profile_pic = current_dir / "assests" / "Dp (Main).gif"   #D:\Chat.AI\assests\Dp (Main).gif
 
 PAGE_TITLE = "Digital CV | Dhvanil Patel"
 PAGE_ICON = ":wave:"
@@ -128,7 +129,7 @@ if selected == "Let's Connect":
         with open(file_name) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    local_css("https://github.com/DhvanilPatel2301/Chat.AI/blob/master/styles/style.css")
+    local_css(current_dir / "styles" / "style.css")  #D:\Chat.AI\styles\style.css
 
 if selected == "Home":
     # Display the chatbot's title on the page
@@ -152,5 +153,3 @@ if selected == "Home":
             # Display Gemini-Pro's response
         with st.chat_message("assistant", avatar="🤖"):
              st.markdown(gemini_response.text)
-
-
