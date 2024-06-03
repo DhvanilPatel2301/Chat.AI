@@ -52,8 +52,8 @@ def translate_role_for_streamlit(user_role):
     else:
         None
 
-profile_pic = "Chat.AI\assests\Dp (Main).gif"
-css_file = "Chat.AI\styles\main.css"
+profile_pic = "https://github.com/DhvanilPatel2301/Chat.AI/blob/master/assests/Dp%20(Main).gif"
+css_file = "https://github.com/DhvanilPatel2301/Chat.AI/blob/master/styles/main.css"
 
 PAGE_TITLE = "Digital CV | Dhvanil Patel"
 PAGE_ICON = ":wave:"
