@@ -52,8 +52,8 @@ def translate_role_for_streamlit(user_role):
     else:
         None
 
-profile_pic = "D:\Generative AI (Text to Text Generator)\Dp (Main).gif"
-css_file = "D:\Generative AI (Text to Text Generator)\main.css"
+profile_pic = "D:\Chat.AI\assests\Dp (Main).gif"
+css_file = "D:\Chat.AI\styles\main.css"
 
 PAGE_TITLE = "Digital CV | Dhvanil Patel"
 PAGE_ICON = ":wave:"
@@ -128,7 +128,7 @@ if selected == "Let's Connect":
         with open(file_name) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    local_css("D:\Generative AI (Text to Text Generator)\style.css")
+    local_css("D:\Chat.AI\styles\style.css")
 
 if selected == "Home":
     # Display the chatbot's title on the page
